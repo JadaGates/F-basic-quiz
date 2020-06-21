@@ -1,11 +1,25 @@
 import "./style/index.scss";
 import baseURL from "./base";
-import { options } from "./resumeApi";
+import {
+    listEducation,
+    options,
+    showUserAvatar,
+    showUserDescription,
+    showUserName,
+} from "./resumeApi";
 
-fetch(`${baseURL}/user/1`, options)
+const userId = 1;
+
+fetch(`${baseURL}/user/${userId}`, options)
   .then((response) => response.json())
   .then((data) => {
-    document.getElementById(
-      "banner-name"
-    ).innerText = `MY NAME IS ${data.name.toUpperCase()} AND THIS IS MY RESUME/CV`;
+    showUserName(data);
+    showUserDescription(data);
+    showUserAvatar(data);
   });
+
+fetch(`${baseURL}/user/${userId}/educations`, options)
+    .then((response) => response.json())
+    .then((data) => {
+listEducation(data)
+    });
