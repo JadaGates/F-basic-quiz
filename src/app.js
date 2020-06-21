@@ -8,7 +8,10 @@ import {
   showUserName,
 } from "./resumeApi";
 
-const userId = 1;
+const url = window.location.href.toString();
+const regPattern = /user\/(\d+)/g;
+url.match(regPattern);
+const userId = RegExp.$1;
 
 fetch(`${baseURL}/user/${userId}`, options)
   .then((response) => response.json())
