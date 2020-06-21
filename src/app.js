@@ -1,22 +1,11 @@
 import "./style/index.scss";
 import baseURL from "./base";
+import { options } from "./resumeApi";
 
-const apiTest = "http://localhost:8080/h";
-
-const options = {
-  method: "GET", // 请求参数
-  credentials: "same-origin", // cookie设置
-};
-fetch(apiTest, options)
-  .then(function (response) {
-    const a = response;
-    return response;
-  })
-  .then(function (myJson) {
-    console.log(myJson.text()); // 响应数据
-  })
-  .catch(function (err) {
-    console.log(err); // 异常处理
+fetch(`${baseURL}/user/1`, options)
+  .then((response) => response.json())
+  .then((data) => {
+    document.getElementById(
+      "banner-name"
+    ).innerText = `MY NAME IS ${data.name.toUpperCase()} AND THIS IS MY RESUME/CV`;
   });
-
-// $('#test').html(getTest());
