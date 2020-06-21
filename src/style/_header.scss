@@ -1,0 +1,19 @@
+.greeting-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#banner-name{
+  border-bottom-style: solid;
+  padding-bottom: 14px;
+  border-color: #F8F9FA;
+}
+
+.info-header{
+  display: flex;
+  align-items: flex-start;
+  padding-left: $content-margin-left;
+  color: $primary-color;
+  font-weight: bold;
+}

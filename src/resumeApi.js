@@ -8,7 +8,9 @@ export const options = {
 export const showUserName = function (data) {
   document.getElementById(
     "banner-name"
-  ).innerText = `MY NAME IS ${data.name.toUpperCase()} AND THIS IS MY RESUME/CV`;
+  ).innerText = `MY NAME IS ${data.name.toUpperCase()} ${
+    data.age
+  }YO AND THIS IS MY RESUME/CV`;
 };
 
 export const showUserDescription = function (data) {
@@ -29,6 +31,7 @@ export const listEducation = function (data) {
     li.setAttribute("id", id);
     upperList.appendChild(li);
   }
+
   data.forEach((element) => {
     creatList(ul, element.year, "year");
     creatList(ul, element.title, "title");

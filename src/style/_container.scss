@@ -1,0 +1,19 @@
+.container{
+  background-color: white;
+  margin: 120px 40px 20px 40px;
+}
+
+.user-avatar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#user-avatar{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+}
+
+#about-me{
+  margin-left: $content-margin-left;
+}

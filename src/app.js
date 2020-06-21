@@ -1,11 +1,11 @@
 import "./style/index.scss";
 import baseURL from "./base";
 import {
-    listEducation,
-    options,
-    showUserAvatar,
-    showUserDescription,
-    showUserName,
+  listEducation,
+  options,
+  showUserAvatar,
+  showUserDescription,
+  showUserName,
 } from "./resumeApi";
 
 const userId = 1;
@@ -19,7 +19,7 @@ fetch(`${baseURL}/user/${userId}`, options)
   });
 
 fetch(`${baseURL}/user/${userId}/educations`, options)
-    .then((response) => response.json())
-    .then((data) => {
-listEducation(data)
-    });
+  .then((response) => response.json())
+  .then((data) => {
+    listEducation(data);
+  });
