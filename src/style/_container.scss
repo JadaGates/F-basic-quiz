@@ -1,6 +1,6 @@
 .container{
   background-color: white;
-  margin: 120px 40px 20px 40px;
+  margin: 120px 60px 0px 60px;
 }
 
 .user-avatar{
@@ -16,6 +16,7 @@
 
 #about-me, #year{
   margin-left: $content-margin-left;
+  margin-right: $content-margin-left;
 }
 
 #title{
@@ -26,8 +27,16 @@
 
 #title, #description{
   margin-left: 110px;
+  margin-right: $content-margin-left;
+  padding-left: 10px;
   background-color: $gray-light;
   padding-bottom: 4px;
+  &:last-child{
+    margin-bottom: 20px;
+  }
+}
+#description{
+  margin-bottom: 6px;
 }
 
 #education-list{
